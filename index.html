@@ -110,146 +110,187 @@ header{
     display:flex;
     justify-content:space-between;
     align-items:center;
+    gap:10px;
 }
 
-.brand{
+.headerTitle{
     color:#ff7a00;
-    font-weight:1000;
     font-size:20px;
+    font-weight:1000;
+}
+
+.headerSub{
+    color:#68717b;
+    font-size:9px;
+    margin-top:3px;
 }
 
 .logout{
-    padding:8px 11px;
-    border:1px solid #36251a;
-    background:#090b0d;
-    color:#aaa;
-    border-radius:8px;
+    border:1px solid #39261a;
+    background:#0a0d10;
+    color:#ff7a00;
+    padding:9px 13px;
+    border-radius:9px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.container{
+    width:100%;
+    max-width:1100px;
+    margin:auto;
+    padding:20px 15px 50px;
+}
+
+.card{
+    background:#080c10;
+    border:1px solid #1d2730;
+    border-radius:16px;
+    padding:18px;
+    margin-bottom:15px;
+}
+
+.cardTitle{
+    color:#ff7a00;
+    font-weight:1000;
+    font-size:15px;
+    margin-bottom:14px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:10px;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:10px;
+    margin-bottom:15px;
+}
+
+.stat{
+    background:#080c10;
+    border:1px solid #1d2730;
+    border-radius:15px;
+    padding:18px;
+}
+
+.statName{
+    color:#697585;
     font-size:10px;
     font-weight:bold;
 }
 
-.container{
-    width:calc(100% - 24px);
-    max-width:1000px;
-    margin:25px auto;
-}
-
-.panel{
-    background:#080c10;
-    border:1px solid #19242c;
-    border-radius:16px;
-    padding:17px;
-    margin-bottom:15px;
-}
-
-.panel h2{
-    color:#ff7a00;
-    font-size:17px;
-    margin-bottom:14px;
-}
-
-.keyPreview{
-    background:#020406;
-    border:1px dashed #33404a;
-    border-radius:10px;
-    padding:13px;
-    margin-bottom:10px;
-    color:#00eaff;
+.statValue{
+    color:#fff;
+    font-size:25px;
     font-weight:1000;
-    text-align:center;
-    word-break:break-all;
-}
-
-.generateButton{
-    width:100%;
-    padding:12px;
-    background:#10171c;
-    color:#00eaff;
-    border:1px solid #17313a;
-    border-radius:10px;
-    font-weight:1000;
-    margin-bottom:10px;
+    margin-top:7px;
 }
 
 .keyList{
     display:flex;
     flex-direction:column;
+    gap:8px;
+}
+
+.keyItem{
+    background:#030507;
+    border:1px solid #1d2730;
+    border-radius:12px;
+    padding:13px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
     gap:10px;
 }
 
-.keyCard{
-    background:#05080a;
-    border:1px solid #18252d;
-    border-radius:13px;
-    padding:13px;
-}
-
-.keyValue{
-    color:#00eaff;
-    font-size:13px;
+.keyCode{
+    color:#ff9a45;
+    font-size:14px;
     font-weight:1000;
     word-break:break-all;
 }
 
-.note{
-    color:#fff;
-    font-size:11px;
-    margin-top:8px;
+.keyInfo{
+    color:#697585;
+    font-size:9px;
+    margin-top:5px;
 }
 
-.meta{
-    color:#667585;
+.deleteBtn{
+    flex-shrink:0;
+    border:1px solid #562020;
+    background:#170909;
+    color:#ff4b4b;
+    padding:8px 11px;
+    border-radius:8px;
     font-size:10px;
-    margin-top:7px;
-}
-
-.active{
-    color:#00ff66;
-}
-
-.deleted{
-    color:#ff4040;
-}
-
-.keyActions{
-    display:flex;
-    gap:8px;
-    margin-top:10px;
-}
-
-.deleteButton{
-    flex:1;
-    padding:10px;
-    background:#170707;
-    border:1px solid #411212;
-    color:#ff4545;
-    border-radius:8px;
-    font-weight:1000;
-}
-
-.copyButton{
-    flex:1;
-    padding:10px;
-    background:#07151a;
-    border:1px solid #12343d;
-    color:#00eaff;
-    border-radius:8px;
-    font-weight:1000;
+    font-weight:bold;
+    cursor:pointer;
 }
 
 .empty{
+    color:#697585;
     text-align:center;
-    color:#5d6975;
+    padding:25px;
+    font-size:12px;
+}
+
+.message{
+    margin-top:10px;
+    padding:10px;
+    border-radius:9px;
+    display:none;
     font-size:11px;
-    padding:20px;
+    font-weight:bold;
+}
+
+.success{
+    display:block;
+    background:#08200f;
+    border:1px solid #164c29;
+    color:#45e889;
+}
+
+.error{
+    display:block;
+    background:#220909;
+    border:1px solid #572020;
+    color:#ff5555;
+}
+
+.search{
+    margin-bottom:12px;
+}
+
+.refresh{
+    border:1px solid #26333d;
+    background:#0a0d10;
+    color:#fff;
+    padding:10px 13px;
+    border-radius:9px;
+    cursor:pointer;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+@media(max-width:650px){
+    .grid,
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .headerInner{
+        padding:12px;
+    }
 }
 </style>
 </head>
 
 <body>
-
-
-<!-- ================= LOGIN ================= -->
 
 <div id="loginScreen">
 
@@ -260,21 +301,22 @@ header{
         </div>
 
         <div class="sub">
-            QUẢN LÝ KEY WEBSITE
+            QUẢN LÝ KEY • TẠO KEY • XÓA KEY
         </div>
 
         <input
             id="adminPassword"
             class="loginInput"
             type="password"
-            placeholder="Mật khẩu Admin..."
+            placeholder="Nhập key Admin..."
+            autocomplete="off"
         >
 
         <button
-            id="loginButton"
             class="loginButton"
+            onclick="loginAdmin()"
         >
-            🔐 ĐĂNG NHẬP ADMIN
+            ĐĂNG NHẬP ADMIN
         </button>
 
         <div id="loginError"></div>
@@ -284,23 +326,27 @@ header{
 </div>
 
 
-<!-- ================= ADMIN ================= -->
-
 <div id="adminPanel">
 
 <header>
 
     <div class="headerInner">
 
-        <div class="brand">
-            ⚡ C.BANGVMOD ADMIN
+        <div>
+            <div class="headerTitle">
+                C.BANGVMOD ADMIN
+            </div>
+
+            <div class="headerSub">
+                HỆ THỐNG QUẢN LÝ KEY
+            </div>
         </div>
 
         <button
-            id="logoutButton"
             class="logout"
+            onclick="logoutAdmin()"
         >
-            🚪 ĐĂNG XUẤT
+            ĐĂNG XUẤT
         </button>
 
     </div>
@@ -308,121 +354,154 @@ header{
 </header>
 
 
-<main class="container">
+<div class="container">
 
+    <div class="stats">
 
-<!-- CREATE KEY -->
+        <div class="stat">
+            <div class="statName">
+                TỔNG KEY
+            </div>
 
-<section class="panel">
-
-    <h2>🔑 TẠO KEY MỚI</h2>
-
-    <input
-        id="customKey"
-        class="adminInput"
-        placeholder="KEY tùy chỉnh (để trống = tự tạo)"
-        autocomplete="off"
-    >
-
-    <input
-        id="keyNote"
-        class="adminInput"
-        placeholder="Ghi chú KEY, ví dụ: Chào mừng đến với website!"
-        autocomplete="off"
-    >
-
-    <select
-        id="maxUses"
-        class="adminSelect"
-    >
-        <option value="1">
-            1 lượt sử dụng
-        </option>
-
-        <option value="2">
-            2 lượt sử dụng
-        </option>
-
-        <option value="5">
-            5 lượt sử dụng
-        </option>
-
-        <option value="10">
-            10 lượt sử dụng
-        </option>
-
-        <option value="999999">
-            Không giới hạn
-        </option>
-    </select>
-
-    <div
-        id="keyPreview"
-        class="keyPreview"
-    >
-        KEY sẽ xuất hiện ở đây
-    </div>
-
-    <button
-        id="generateButton"
-        class="generateButton"
-    >
-        🎲 TẠO KEY NGẪU NHIÊN
-    </button>
-
-    <button
-        id="createButton"
-        class="createButton"
-    >
-        ➕ TẠO KEY
-    </button>
-
-</section>
-
-
-<!-- KEY LIST -->
-
-<section class="panel">
-
-    <h2>
-        📋 DANH SÁCH KEY
-    </h2>
-
-    <div
-        id="keyList"
-        class="keyList"
-    >
-        <div class="empty">
-            Đang tải KEY...
+            <div
+                class="statValue"
+                id="totalKeys"
+            >
+                0
+            </div>
         </div>
+
+
+        <div class="stat">
+            <div class="statName">
+                KEY ĐANG HIỂN THỊ
+            </div>
+
+            <div
+                class="statValue"
+                id="shownKeys"
+            >
+                0
+            </div>
+        </div>
+
+
+        <div class="stat">
+            <div class="statName">
+                TRẠNG THÁI ADMIN
+            </div>
+
+            <div
+                class="statValue"
+                style="font-size:16px;color:#45e889"
+            >
+                ONLINE
+            </div>
+        </div>
+
     </div>
 
-</section>
+
+    <div class="card">
+
+        <div class="cardTitle">
+            🔑 TẠO KEY MỚI
+        </div>
+
+        <div class="grid">
+
+            <input
+                id="keyInput"
+                class="adminInput"
+                placeholder="Nhập key, ví dụ: BANGVIP001"
+                autocomplete="off"
+            >
+
+            <select
+                id="keyType"
+                class="adminSelect"
+            >
+                <option value="vip">
+                    VIP
+                </option>
+
+                <option value="normal">
+                    NORMAL
+                </option>
+
+                <option value="admin">
+                    ADMIN
+                </option>
+            </select>
+
+        </div>
+
+        <button
+            class="createButton"
+            onclick="createKey()"
+        >
+            + TẠO KEY
+        </button>
+
+        <div
+            id="createMessage"
+            class="message"
+        ></div>
+
+    </div>
 
 
-</main>
+    <div class="card">
+
+        <div class="cardTitle">
+            📋 DANH SÁCH KEY
+        </div>
+
+        <input
+            id="searchInput"
+            class="adminInput search"
+            placeholder="Tìm kiếm key..."
+            oninput="renderKeys()"
+        >
+
+        <button
+            class="refresh"
+            onclick="loadKeys()"
+        >
+            ↻ LÀM MỚI
+        </button>
+
+        <div
+            id="keyList"
+            class="keyList"
+        >
+            <div class="empty">
+                Đang tải dữ liệu...
+            </div>
+        </div>
+
+    </div>
+
+</div>
 
 </div>
 
 
 <script type="module">
 
-import { initializeApp }
-from "https://www.gstatic.com/firebasejs/12.1.0/firebase-app.js";
+import {
+    initializeApp
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
 
 import {
     getFirestore,
     collection,
     addDoc,
-    onSnapshot,
-    serverTimestamp,
-    doc,
-    runTransaction
-}
-from "https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore.js";
+    getDocs,
+    deleteDoc,
+    doc
+} from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
-
-/* ================= FIREBASE ================= */
 
 const firebaseConfig = {
 
@@ -446,6 +525,7 @@ const firebaseConfig = {
 
     measurementId:
         "G-BDDQJW8MEL"
+
 };
 
 
@@ -456,578 +536,519 @@ const db =
     getFirestore(app);
 
 
-/* ================= ADMIN PASSWORD ================= */
+/* KEY ADMIN */
 
-const ADMIN_PASSWORD =
-    "BANGMCMODADMINholakdjjzhuns";
-
-
-/* ================= DOM ================= */
-
-const loginScreen =
-    document.getElementById(
-        "loginScreen"
-    );
-
-const adminPanel =
-    document.getElementById(
-        "adminPanel"
-    );
-
-const adminPassword =
-    document.getElementById(
-        "adminPassword"
-    );
-
-const loginButton =
-    document.getElementById(
-        "loginButton"
-    );
-
-const loginError =
-    document.getElementById(
-        "loginError"
-    );
-
-const logoutButton =
-    document.getElementById(
-        "logoutButton"
-    );
-
-const customKey =
-    document.getElementById(
-        "customKey"
-    );
-
-const keyNote =
-    document.getElementById(
-        "keyNote"
-    );
-
-const maxUses =
-    document.getElementById(
-        "maxUses"
-    );
-
-const keyPreview =
-    document.getElementById(
-        "keyPreview"
-    );
-
-const generateButton =
-    document.getElementById(
-        "generateButton"
-    );
-
-const createButton =
-    document.getElementById(
-        "createButton"
-    );
-
-const keyList =
-    document.getElementById(
-        "keyList"
-    );
+const ADMIN_KEY =
+    "BANGMODVIPMCADMIN";
 
 
-/* ================= LOGIN ================= */
+/* COLLECTION */
 
-loginButton.addEventListener(
-    "click",
-    ()=>{
-
-        if(
-            adminPassword.value ===
-            ADMIN_PASSWORD
-        ){
-
-            loginScreen.style.display =
-                "none";
-
-            adminPanel.style.display =
-                "block";
-
-            sessionStorage.setItem(
-                "cbang_admin",
-                "1"
-            );
-
-        }else{
-
-            loginError.textContent =
-                "❌ Sai mật khẩu Admin!";
-
-            adminPassword.value = "";
-
-            adminPassword.focus();
-        }
-    }
-);
+const KEY_COLLECTION =
+    "keys";
 
 
-adminPassword.addEventListener(
-    "keydown",
-    e=>{
-
-        if(e.key === "Enter"){
-            loginButton.click();
-        }
-    }
-);
+let allKeys = [];
 
 
-/* ================= AUTO LOGIN SESSION ================= */
+/* LOGIN */
 
-if(
-    sessionStorage.getItem(
-        "cbang_admin"
-    ) === "1"
-){
+window.loginAdmin = function(){
 
-    loginScreen.style.display =
-        "none";
+    const input =
+        document
+        .getElementById("adminPassword")
+        .value
+        .trim();
 
-    adminPanel.style.display =
-        "block";
-}
+    const error =
+        document
+        .getElementById("loginError");
 
 
-/* ================= LOGOUT ================= */
+    if(input === ADMIN_KEY){
 
-logoutButton.addEventListener(
-    "click",
-    ()=>{
-
-        sessionStorage.removeItem(
-            "cbang_admin"
+        sessionStorage.setItem(
+            "cbang_admin_login",
+            "true"
         );
 
-        location.reload();
-    }
-);
+        error.innerText = "";
 
+        document
+        .getElementById("loginScreen")
+        .style.display = "none";
 
-/* ================= GENERATE KEY ================= */
+        document
+        .getElementById("adminPanel")
+        .style.display = "block";
 
-function randomKey(){
+        loadKeys();
 
-    const chars =
-        "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+    }else{
 
-    let result =
-        "BANGMC-";
+        error.innerText =
+            "❌ Key Admin không chính xác!";
 
-    for(
-        let i=0;
-        i<16;
-        i++
-    ){
-
-        result +=
-            chars[
-                Math.floor(
-                    Math.random() *
-                    chars.length
-                )
-            ];
     }
 
-    return result;
-}
-
-
-function updatePreview(){
-
-    const value =
-        customKey.value.trim();
-
-    keyPreview.textContent =
-        value ||
-        "KEY sẽ xuất hiện ở đây";
-}
-
-
-generateButton.addEventListener(
-    "click",
-    ()=>{
-
-        customKey.value =
-            randomKey();
-
-        updatePreview();
-    }
-);
-
-
-customKey.addEventListener(
-    "input",
-    updatePreview
-);
-
-
-/* ================= CREATE KEY ================= */
-
-createButton.addEventListener(
-    "click",
-    async()=>{
-
-        let key =
-            customKey.value.trim();
-
-        const note =
-            keyNote.value.trim();
-
-        const uses =
-            Number(
-                maxUses.value
-            );
-
-
-        if(!key){
-
-            key =
-                randomKey();
-
-            customKey.value =
-                key;
-
-            updatePreview();
-        }
-
-
-        if(!note){
-
-            alert(
-                "❌ Vui lòng nhập ghi chú KEY!"
-            );
-
-            keyNote.focus();
-
-            return;
-        }
-
-
-        createButton.disabled =
-            true;
-
-        createButton.textContent =
-            "⏳ ĐANG TẠO...";
-
-
-        try{
-
-            await addDoc(
-                collection(
-                    db,
-                    "website_keys"
-                ),
-                {
-
-                    key:key,
-
-                    note:note,
-
-                    maxUses:uses,
-
-                    usedCount:0,
-
-                    active:true,
-
-                    createdAt:
-                        serverTimestamp()
-                }
-            );
-
-
-            alert(
-                "✅ Tạo KEY thành công!\n\n" +
-                "KEY: " + key +
-                "\n\nGhi chú: " + note
-            );
-
-
-            customKey.value = "";
-
-            keyNote.value = "";
-
-            keyPreview.textContent =
-                "KEY sẽ xuất hiện ở đây";
-
-
-        }catch(error){
-
-            console.error(error);
-
-            alert(
-                "❌ Không thể tạo KEY!"
-            );
-
-        }finally{
-
-            createButton.disabled =
-                false;
-
-            createButton.textContent =
-                "➕ TẠO KEY";
-        }
-    }
-);
-
-
-/* ================= ESCAPE ================= */
-
-function escapeHTML(text){
-
-    return String(text || "")
-        .replace(/&/g,"&amp;")
-        .replace(/</g,"&lt;")
-        .replace(/>/g,"&gt;")
-        .replace(/"/g,"&quot;")
-        .replace(/'/g,"&#039;");
-}
-
-
-/* ================= COPY ================= */
-
-window.copyKey =
-async function(key){
-
-    try{
-
-        await navigator.clipboard.writeText(
-            key
-        );
-
-        alert(
-            "✅ Đã copy KEY!"
-        );
-
-    }catch{
-
-        prompt(
-            "Copy KEY:",
-            key
-        );
-    }
 };
 
 
-/* ================= DELETE / DISABLE ================= */
+/* AUTO LOGIN */
 
-window.deleteKey =
-async function(id){
+if(
+    sessionStorage.getItem(
+        "cbang_admin_login"
+    ) === "true"
+){
 
-    if(
-        !confirm(
-            "Bạn có chắc muốn xóa KEY này không?\n\n" +
-            "KEY sẽ được vô hiệu hóa và người dùng sẽ thấy:\n" +
-            "🗑️ KEY này đã bị xóa!"
-        )
-    ){
+    document
+    .getElementById("loginScreen")
+    .style.display = "none";
 
+    document
+    .getElementById("adminPanel")
+    .style.display = "block";
+
+    loadKeys();
+
+}
+
+
+/* LOGOUT */
+
+window.logoutAdmin = function(){
+
+    sessionStorage.removeItem(
+        "cbang_admin_login"
+    );
+
+    location.reload();
+
+};
+
+
+/* TẠO KEY */
+
+window.createKey = async function(){
+
+    const input =
+        document
+        .getElementById("keyInput");
+
+    const type =
+        document
+        .getElementById("keyType")
+        .value;
+
+    const message =
+        document
+        .getElementById("createMessage");
+
+    const key =
+        input.value.trim();
+
+
+    if(!key){
+
+        showMessage(
+            message,
+            "❌ Vui lòng nhập key!",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    if(key.length < 4){
+
+        showMessage(
+            message,
+            "❌ Key phải có ít nhất 4 ký tự!",
+            "error"
+        );
+
+        return;
+
+    }
+
+
+    try{
+
+        const existing =
+            allKeys.find(
+                item =>
+                    String(item.key || "")
+                    .toLowerCase()
+                    === key.toLowerCase()
+            );
+
+
+        if(existing){
+
+            showMessage(
+                message,
+                "❌ Key này đã tồn tại!",
+                "error"
+            );
+
+            return;
+
+        }
+
+
+        await addDoc(
+            collection(
+                db,
+                KEY_COLLECTION
+            ),
+            {
+
+                key:key,
+
+                type:type,
+
+                active:true,
+
+                createdAt:
+                    new Date()
+                    .toISOString()
+
+            }
+        );
+
+
+        input.value = "";
+
+
+        showMessage(
+            message,
+            "✅ Tạo key thành công: " + key,
+            "success"
+        );
+
+
+        await loadKeys();
+
+
+    }catch(error){
+
+        console.error(error);
+
+        showMessage(
+            message,
+            "❌ Không thể tạo key. Kiểm tra Firestore Rules.",
+            "error"
+        );
+
+    }
+
+};
+
+
+/* LOAD KEY */
+
+window.loadKeys = async function(){
+
+    const list =
+        document
+        .getElementById("keyList");
+
+
+    list.innerHTML =
+        '<div class="empty">Đang tải...</div>';
+
+
+    try{
+
+        const snapshot =
+            await getDocs(
+                collection(
+                    db,
+                    KEY_COLLECTION
+                )
+            );
+
+
+        allKeys = [];
+
+
+        snapshot.forEach(item => {
+
+            allKeys.push({
+
+                id:item.id,
+
+                ...item.data()
+
+            });
+
+        });
+
+
+        allKeys.sort(
+            (a,b) =>
+                String(
+                    b.createdAt || ""
+                )
+                .localeCompare(
+                    String(
+                        a.createdAt || ""
+                    )
+                )
+        );
+
+
+        document
+        .getElementById("totalKeys")
+        .innerText =
+            allKeys.length;
+
+
+        renderKeys();
+
+
+    }catch(error){
+
+        console.error(error);
+
+        list.innerHTML = `
+
+            <div class="empty">
+
+                ❌ Không thể tải key.
+
+                <br><br>
+
+                Kiểm tra Firestore Rules
+                và collection "keys".
+
+            </div>
+
+        `;
+
+    }
+
+};
+
+
+/* HIỂN THỊ KEY */
+
+window.renderKeys = function(){
+
+    const list =
+        document
+        .getElementById("keyList");
+
+
+    const search =
+        document
+        .getElementById("searchInput")
+        .value
+        .trim()
+        .toLowerCase();
+
+
+    const filtered =
+        allKeys.filter(
+            item =>
+                String(
+                    item.key || ""
+                )
+                .toLowerCase()
+                .includes(search)
+        );
+
+
+    document
+    .getElementById("shownKeys")
+    .innerText =
+        filtered.length;
+
+
+    if(filtered.length === 0){
+
+        list.innerHTML = `
+
+            <div class="empty">
+                Không có key nào.
+            </div>
+
+        `;
+
+        return;
+
+    }
+
+
+    list.innerHTML = "";
+
+
+    filtered.forEach(item => {
+
+        const div =
+            document.createElement("div");
+
+
+        div.className =
+            "keyItem";
+
+
+        const created =
+            item.createdAt
+            ? new Date(
+                item.createdAt
+              ).toLocaleString("vi-VN")
+            : "Không rõ";
+
+
+        div.innerHTML = `
+
+            <div>
+
+                <div class="keyCode">
+                    ${escapeHTML(
+                        item.key || ""
+                    )}
+                </div>
+
+                <div class="keyInfo">
+
+                    Loại:
+                    ${escapeHTML(
+                        item.type || "normal"
+                    )}
+
+                    •
+
+                    Trạng thái:
+                    ${
+                        item.active !== false
+                        ? "ACTIVE"
+                        : "DISABLED"
+                    }
+
+                    •
+
+                    ${escapeHTML(created)}
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="deleteBtn"
+                onclick="deleteKey('${item.id}')"
+            >
+                XÓA
+            </button>
+
+        `;
+
+
+        list.appendChild(div);
+
+    });
+
+};
+
+
+/* XÓA KEY */
+
+window.deleteKey = async function(id){
+
+    const item =
+        allKeys.find(
+            x => x.id === id
+        );
+
+
+    if(!item){
+        return;
+    }
+
+
+    const ok =
+        confirm(
+            "Bạn có chắc muốn xóa key:\n\n"
+            + item.key
+            + "\n\nKhông thể hoàn tác!"
+        );
+
+
+    if(!ok){
         return;
     }
 
 
     try{
 
-        await runTransaction(
-            db,
-            async(transaction)=>{
-
-                const keyRef =
-                    doc(
-                        db,
-                        "website_keys",
-                        id
-                    );
-
-                transaction.update(
-                    keyRef,
-                    {
-
-                        active:false,
-
-                        deletedAt:
-                            serverTimestamp()
-                    }
-                );
-            }
+        await deleteDoc(
+            doc(
+                db,
+                KEY_COLLECTION,
+                id
+            )
         );
 
 
-        alert(
-            "🗑️ Đã xóa/vô hiệu hóa KEY!"
-        );
+        await loadKeys();
+
 
     }catch(error){
 
         console.error(error);
 
         alert(
-            "❌ Không thể xóa KEY!"
+            "Không thể xóa key. Kiểm tra Firestore Rules."
         );
+
     }
+
 };
 
 
-/* ================= REALTIME KEY LIST ================= */
+/* THÔNG BÁO */
 
-const keysQuery =
-    collection(
-        db,
-        "website_keys"
-    );
+function showMessage(
+    element,
+    text,
+    type
+){
 
+    element.innerText =
+        text;
 
-onSnapshot(
-    keysQuery,
-    snapshot=>{
-
-        keyList.innerHTML = "";
-
-
-        if(snapshot.empty){
-
-            keyList.innerHTML =
-                `<div class="empty">
-                    Chưa có KEY nào.
-                </div>`;
-
-            return;
-        }
+    element.className =
+        "message " + type;
 
 
-        const docs =
-            snapshot.docs
-                .sort(
-                    (a,b)=>{
+    setTimeout(() => {
 
-                        const ta =
-                            a.data().createdAt
-                                ?.seconds || 0;
+        element.className =
+            "message";
 
-                        const tb =
-                            b.data().createdAt
-                                ?.seconds || 0;
+    },4000);
 
-                        return tb-ta;
-                    }
-                );
+}
 
 
-        docs.forEach(
-            keyDoc=>{
+/* CHỐNG HTML */
 
-                const data =
-                    keyDoc.data();
+function escapeHTML(value){
 
-                const max =
-                    Number(
-                        data.maxUses || 1
-                    );
+    return String(value)
+        .replaceAll("&","&amp;")
+        .replaceAll("<","&lt;")
+        .replaceAll(">","&gt;")
+        .replaceAll('"',"&quot;")
+        .replaceAll("'","&#039;");
 
-                const used =
-                    Number(
-                        data.usedCount || 0
-                    );
-
-                const active =
-                    data.active !== false;
-
-
-                const status =
-                    active
-                    ? `<span class="active">
-                        🟢 ĐANG HOẠT ĐỘNG
-                       </span>`
-                    : `<span class="deleted">
-                        🗑️ ĐÃ XÓA
-                       </span>`;
-
-
-                const usesText =
-                    max >= 999999
-                    ? `${used} / ∞`
-                    : `${used} / ${max}`;
-
-
-                const card =
-                    document.createElement(
-                        "div"
-                    );
-
-                card.className =
-                    "keyCard";
-
-
-                card.innerHTML = `
-
-                    <div class="keyValue">
-                        🔑 ${escapeHTML(data.key)}
-                    </div>
-
-                    <div class="note">
-                        💬 ${escapeHTML(
-                            data.note ||
-                            "Không có ghi chú"
-                        )}
-                    </div>
-
-                    <div class="meta">
-                        📊 Lượt dùng:
-                        ${usesText}
-                    </div>
-
-                    <div class="meta">
-                        Trạng thái:
-                        ${status}
-                    </div>
-
-                    <div class="keyActions">
-
-                        <button
-                            class="copyButton"
-                            onclick="copyKey(
-                                '${String(data.key)
-                                    .replace(/'/g,"\\'")}'
-                            )"
-                        >
-                            📋 COPY KEY
-                        </button>
-
-                        ${
-                            active
-                            ?
-                            `<button
-                                class="deleteButton"
-                                onclick="deleteKey(
-                                    '${keyDoc.id}'
-                                )"
-                            >
-                                🗑️ XÓA KEY
-                            </button>`
-                            :
-                            `<button
-                                class="deleteButton"
-                                disabled
-                                style="opacity:.35"
-                            >
-                                🗑️ ĐÃ XÓA
-                            </button>`
-                        }
-
-                    </div>
-                `;
-
-
-                keyList.appendChild(
-                    card
-                );
-            }
-        );
-    }
-);
+}
 
 </script>
 
